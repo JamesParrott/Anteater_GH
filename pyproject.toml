@@ -1,0 +1,16 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "Anteater_GH"
+version = "0.0.0"
+authors = [{name = "James Parrott", email = "james.parrott@proton.me"}]
+description = "Fuzzy. Finds bugs.  Fuzz testing helper functions for Grasshopper Pythons."
+readme = {file = "README.md", content-type = "text/markdown"}
+requires-python = ">=2.7"
+keywords = ["Rhino", "Grasshopper", "fuzzing", "testing"]
+license = {file = "LICENSE.md"}
+classifiers = [
+    "Programming Language :: Python",
+]

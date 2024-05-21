@@ -1,29 +1,26 @@
-#! /usr/bin/awk NR==3
-# -*- coding: utf-8 -*-
-# This module requires Grasshopper Python (Rhino3D)
+"""
+Copyright 2024 James Parrott
 
-# MIT License
+Permission is hereby granted, free of charge, to any person obtaining
+ a copy of this software 
+and associated documentation files (the “Software”), to deal in the 
+Software without restriction, 
+including without limitation the rights to use, copy, modify, merge, 
+publish, distribute, sublicense, and/or sell copies of the Software, 
+and to permit persons to whom the Software is furnished to do so, 
+subject to the following conditions:
 
-# Permission is hereby granted, free of charge, to any person obtaining a copy
-# of this software and associated documentation files (the "Software"), to deal
-# in the Software without restriction, including without limitation the rights
-# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-# copies of the Software, and to permit persons to whom the Software is
-# furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be 
+included in all copies or substantial portions of the Software.
 
-# The above copyright notice and this permission notice shall be included in all
-# copies or substantial portions of the Software.
-
-# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-# SOFTWARE.
-
-__author__ = 'James Parrott'
-__version__ = '3.0.0.alpha_3'
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, 
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF 
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY 
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, 
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE 
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+"""
 
 
 
@@ -101,7 +98,7 @@ def random_nurbs_curve(length = None, degree = None):
     # adding knots also adds control points and removing knots removes control points. 
     # Knots can be added without changing the shape of a NURBS curve. 
     # In general, removing knots will change the shape of a curve.
-    # """
+    # """ (quotation from link above)
     knots = []
 
     i = 0
@@ -155,9 +152,7 @@ def needed_args(func):
         return arg_spec.args
     return arg_spec.args[:-len(arg_spec.defaults)]
 
-#for obj_gen in OBJECT_GENERATORS:
-#    break
-#    print('%s: %s' % (obj_gen.__name__, needed_args(obj_gen)))
+
 
 random_funcs = OrderedDict([
                      (('start', 'end', 'first', 'second', 'third', 'center'), random_triple),
