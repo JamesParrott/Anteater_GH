@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "Anteater_GH"
-version = "0.0.0"
+version = "0.0.1"
 authors = [{name = "James Parrott", email = "james.parrott@proton.me"}]
 description = "Fuzz testing helper functions for Grasshopper Pythons."
 readme = {file = "README.md", content-type = "text/markdown"}
